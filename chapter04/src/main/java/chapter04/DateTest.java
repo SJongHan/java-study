@@ -9,6 +9,7 @@ public class DateTest {
 		Date now = new Date();
 		
 		PrintDate01(now);
+		PrintDate02(now);
 	}
 
 	
@@ -16,7 +17,7 @@ public class DateTest {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String date = sdf.format(d);
 		
-		//System.out.println(date);
+		System.out.println(date);
 	}
 	
 	public static void PrintDate02(Date d) {
@@ -38,18 +39,23 @@ public class DateTest {
 		// 초
 		int seconds = d.getSeconds();
 		
-		System.out.println("dddd");
 		
+//		System.out.println(
+//				(year+1900) + "-" +
+//				(month+1) + "-" +
+//				date + " " +
+//				hours + ":" +
+//				minutes + ":" +
+//				seconds);
+//	}
 		System.out.println(
 				(year+1900) + "-" +
-				(month+1) + "-" +
+				(month > 9 ? "" : "0") + (month+1) + "-" +
 				date + " " +
 				hours + ":" +
 				minutes + ":" +
 				seconds);
-		
-	}
-	
+		}
 	
 	
 	
