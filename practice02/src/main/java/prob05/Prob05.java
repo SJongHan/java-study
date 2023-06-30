@@ -11,12 +11,15 @@ public class Prob05 {
 		while( true ) {
 			
 			/* 게임 작성 */
+			int minNumber = 1;
+			int maxNumber = 100;
 
 			// 정답 램덤하게 만들기
 			Random random = new Random();
 			int correctNumber = random.nextInt( 100 ) + 1;
-			System.out.println(correctNumber);
-
+			
+			int countTry = 0;
+			System.out.println("수를 결정했습니다. 맞춰");
 			
 			//새 게임 여부 확인하기
 			System.out.print( "다시 하겠습니까(y/n)>>" );
